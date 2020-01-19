@@ -1,3 +1,10 @@
+# This is a modified fork of V0.15.0.
+Modified HTML to output labels above input boxes. And removed Placeholder in input boxes.
+## How It Looks
+![ESP8266 WiFi Captive Portal Homepage](https://i.postimg.cc/0QJXF6q0/Wifi-Manager-with-labels.jpg)
+
+Original info below:
+
 ## Current development going on here :arrow_right: [Development Branch](https://github.com/tzapu/WiFiManager/tree/development)
 
 # WiFiManager
