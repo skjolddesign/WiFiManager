@@ -198,9 +198,9 @@ boolean WiFiManager::startConfigPortal() {
 boolean  WiFiManager::startConfigPortal(char const *apName, char const *apPassword) {
   
   if(!WiFi.isConnected()){
-    WiFi.persistent(false);
+    //WiFi.persistent(false); // removed as it wipes credentials??
     // disconnect sta, start ap
-    WiFi.disconnect(); //  this alone is not enough to stop the autoconnecter
+    //WiFi.disconnect(); //  this alone is not enough to stop the autoconnecter. // removed as it wipes credentials??
     WiFi.mode(WIFI_AP);
     WiFi.persistent(true);
   } 
