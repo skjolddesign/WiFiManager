@@ -8,6 +8,17 @@ const char HTTP_FORM_START[] PROGMEM      = "<form method='get' action='wifisave
 const char HTTP_FORM_PARAM[] PROGMEM      = "<br/>{p}:<br><input id='{i}' name='{n}' maxlength={l} value='{v}' {c}>";
 ```
 
+modified startConfigPortal in WIFIManager.cpp to prevent from wiping credentials:
+
+```
+boolean  WiFiManager::startConfigPortal(char const *apName, char const *apPassword) {
+ if(!WiFi.isConnected()){
+   // WiFi.persistent(false);
+   // disconnect sta, start ap
+   // WiFi.disconnect(); //  this alone is not enough to stop the autoconnecter
+```
+
+
 ## How It Looks
 ![ESP8266 WiFi Captive Portal Homepage](https://i.postimg.cc/0QJXF6q0/Wifi-Manager-with-labels.jpg)
 
