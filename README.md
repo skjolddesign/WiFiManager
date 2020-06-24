@@ -1,5 +1,13 @@
 # This is a modified fork of V0.15.0.
 Modified HTML to output labels above input boxes. And removed Placeholder in input boxes.
+
+Change in WIFIManager.h:
+
+```
+const char HTTP_FORM_START[] PROGMEM      = "<form method='get' action='wifisave'>SSID:<br><input id='s' name='s' length=32><br/> Password:<br><input id='p' name='p' length=64 type='password'><br/>";
+const char HTTP_FORM_PARAM[] PROGMEM      = "<br/>{p}:<br><input id='{i}' name='{n}' maxlength={l} value='{v}' {c}>";
+```
+
 ## How It Looks
 ![ESP8266 WiFi Captive Portal Homepage](https://i.postimg.cc/0QJXF6q0/Wifi-Manager-with-labels.jpg)
 
